@@ -1,0 +1,7 @@
+{
+  "name": "pattern",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

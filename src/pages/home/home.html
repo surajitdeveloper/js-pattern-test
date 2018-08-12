@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Pattern</ion-label>
+      <ion-input type="text" [(ngModel)]="todo.pattern" name="pattern"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>String</ion-label>
+      <ion-input [(ngModel)]="todo.string" name="string"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block>Add Todo</button>
+  </form>
+</ion-content>
