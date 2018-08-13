@@ -14,7 +14,9 @@ export class HomePage {
     let string = this.todo.string;
     let ret_str = "";
     let format = /[ !@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/;
-    for(let i =0; i < string.length;i++)
+    if(pattern.length >= string.length)
+    {
+      for(let i =0; i < string.length;i++)
     {
       
       if(typeof pattern[i] != "undefined")
@@ -38,7 +40,16 @@ export class HomePage {
         }
       }
     }
-    this.todo.string = ret_str.toString();
+    }
+    else if(string.length > 0)
+    {
+      ret_str = string.slice(0, (pattern.length - string.length));
+    }
+    else
+    {
+      ret_str = "";
+    }
+    this.todo.string = ret_str.toUpperCase();
   }
 
   constructor(public navCtrl: NavController) {
